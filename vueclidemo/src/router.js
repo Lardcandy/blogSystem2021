@@ -9,17 +9,23 @@ import article from './components/indexSub/article.vue'
 import loginRegister from './components/loginRegister.vue'
 import articleDetails from './components/articleDetails.vue'
 // import admin from './components/admin.vue'
+import elisaBirthday from './components/elisaBirthday.vue'
 
 
 var router = new VueRouter({
     routes:[
         // 首页  讨论区  资源  写博客  个人中心
+        // {
+        //     path:'/', 
+        //     component:index,
+        //     children:[
+        //         { path:'/', component:article}
+        //     ],
+        // },
+        //2021-04-11,彤彤生日，
         {
             path:'/', 
-            component:index,
-            children:[
-                { path:'/', component:article}
-            ],
+            component:elisaBirthday,
         },
         {
             path:'/discussArea',

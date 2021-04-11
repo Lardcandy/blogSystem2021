@@ -1,11 +1,13 @@
 import VueRouter from 'vue-router'
 
-import index from './components/index.vue'
+// 2021-04-11 写Elisabirthday组件时暂时失效
+// import index from './components/index.vue'
 import discussArea from './components/discussArea.vue'
 import resource from './components/resource.vue'
 import blogEdit from './components/blogEdit.vue'
 import personalCenter from './components/personalCenter.vue'
-import article from './components/indexSub/article.vue'
+// 2021-04-11 写Elisabirthday组件时暂时失效
+// import article from './components/indexSub/article.vue'
 import loginRegister from './components/loginRegister.vue'
 import articleDetails from './components/articleDetails.vue'
 // import admin from './components/admin.vue'

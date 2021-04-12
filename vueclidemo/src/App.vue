@@ -16,8 +16,9 @@
         >
           <el-col :xs="4" :sm="24" :md="24" :lg="3" :xl="1">
             <el-menu-item index="1">
-              <i class="el-icon-s-shop"></i>
-              <span>LARDCANDY</span>
+              <!-- <i class="el-icon-s-shop"></i>
+              <span>LARDCANDY</span> -->
+              <h3>Elisa生日应援官网</h3>
             </el-menu-item>
           </el-col>
           <el-col :xs="4" :sm="24" :md="24" :lg="2" :xl="1">

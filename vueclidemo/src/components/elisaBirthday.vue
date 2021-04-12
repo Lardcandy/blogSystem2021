@@ -1,17 +1,27 @@
 <template>
   <div class='main'>
         <div class='background'></div>
-        <div class='box userInfo'></div>
-        <div class='box content'></div>
+        <div class='box userInfo'>
+            <UserInfo></UserInfo>    
+        </div>
+        <div class='box content'>
+            <ElisaBirthdayContent></ElisaBirthdayContent>
+        </div>
   </div>
 </template>
 
 <script>
+import UserInfo from './elisaBirthdaySub/userInfo'
+import ElisaBirthdayContent from './elisaBirthdaySub/elisaBirthdayContent'
+
 export default {
     name: 'app',
     data() {
         return {
         }
+    },
+    components: {
+        UserInfo, ElisaBirthdayContent
     }
 
 }

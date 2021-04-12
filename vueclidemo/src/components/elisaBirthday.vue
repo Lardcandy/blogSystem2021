@@ -1,8 +1,8 @@
 <template>
   <div class='main'>
         <div class='background'></div>
-        <div class='userInfo'></div>
-        <div class='content'></div>
+        <div class='box userInfo'></div>
+        <div class='box content'></div>
   </div>
 </template>
 
@@ -26,28 +26,28 @@ export default {
     position: relative;
 }
 .background {
-    height: 640px;
+    height: 565px;
     overflow: hidden;
     background-image: url(../assets/bg2.jpg);
     background-size: 100%;
     filter: blur(13px);
 }
-.userInfo {
+.box {
     position: absolute;
-    top: 0px;
-    left: 100px;
+    top: 30px;
     float: left;
-    width: 200px;
     height: 500px;
-    background-color: pink;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 20px lightgrey;
+}
+.userInfo {
+    left: 100px;
+    width: 270px;
 }
 .content {
-    position: absolute;
-    top: 0px;
     left: 400px;
-    width: 600px;
-    height: 500px;
-    background-color: powderblue;
+    width: 870px;
 }
 
 </style>

@@ -7,6 +7,13 @@
         <div class='box content'>
             <ElisaBirthdayContent></ElisaBirthdayContent>
         </div>
+        <div class="song">
+            <!-- <audio autoplay="autoplay" controls="controls">
+                <source :src="songUrl" />
+                不支持
+            </audio> -->
+            <iframe :src="songUrl" allow="autoplay" frameborder="0"></iframe>
+        </div>
   </div>
 </template>
 
@@ -18,6 +25,7 @@ export default {
     name: 'app',
     data() {
         return {
+            songUrl: "http://aqqmusic.tc.qq.com/amobile.music.tc.qq.com/C4000022qJBx2sbCrt.m4a?guid=5482205086&vkey=01192196F0B46C2C076B03EB49CB6AF57CC286252E9017D4E78B6F093F98ABEC1C850481B5C7D2CA0BF53C452DACDF37B5CDE2554E58981E&uin=&fromtag=38",
         }
     },
     components: {
@@ -58,6 +66,13 @@ export default {
 .content {
     left: 400px;
     width: 870px;
+}
+.song {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    bottom: 0;
 }
 
 </style>

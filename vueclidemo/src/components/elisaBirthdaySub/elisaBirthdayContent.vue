@@ -13,22 +13,7 @@
         </div>
         <div class="letterPage" v-else-if="flowNum === 1">
             <div class="text">
-                Elisa Kwok 3岁生日应援项目分组文件[秘密]
-            肥集人字[1707]003号
-            关于Elisa Kwok 3岁生日应援项目上线的通知
-            根据肥圆集团“员工第一，体重第二”的战略，满足员工对集团人文关怀的期望，特申请在肥圆集团广夏分部石洞事业部狗灵狗有限公司上线生日应援项目，具体通知如下：
-            一、上线范围：肥圆集团广夏分部石洞事业部狗灵狗有限公司
-            二、上线时间：2021年4月16日
-            三、涉及系统：G-CRM、C-CSS、全球资金系统
-            四、上线支持人员
-            五、上线内容：祝福内容
-            系统问题或优化事项升级渠道：最终用户 -> 关键用户 -> 各系统支持 -> 总体组 -> Sponsor -> Dr.咪吵
-            特此通知！
-
-            肥圆集团生日应援项目组
-            二〇二一年四月十六日
-            
-            发送范围：肥圆集团所有事业部
+                <img id="doc" src="../../assets/document.png" alt="">
             </div>
             <div class="btn">
                 <el-tooltip class="item" effect="light" content="行埋一二边啦，我去稳Jackson，哼！" placement="top">
@@ -41,6 +26,10 @@
         </div>
         <div v-else-if="flowNum === 2">
             <iframe src="https://bruno-simon.com/" frameborder="0" width="870px" height="500px"></iframe>
+            <div class="easterEgg">
+                <p class="tipsText" v-show="!showExpressCode">揸BuBu车  发现小彩蛋</p>
+                <p class="expressCode" v-show="showExpressCode">11-3-3009</p>
+            </div>
         </div>
     </div>
 </template>
@@ -52,6 +41,7 @@ export default {
         return {
             flowNum: 0,
             cancelNum: 0,
+            showExpressCode: false,
         }
     },
     methods: {
@@ -72,20 +62,31 @@ export default {
             if (this.cancelNum == 0) {
                 this.$message({
                     showClose: true,
-                    message: 'CSS系统异常，请稍后再试！'
+                    message: 'CSS系统异常，请稍后再试！',
+                    type: 'error'
                 })
                 this.cancelNum = 1
             }else {
                 this.$message({
                     showClose: true,
-                    message: 'Jackson Chan系广夏10栋909房B，欢迎拨打热线15521004119'
+                    message: 'Jackson Chan系广夏10栋909房B，欢迎拨打热线15521004119',
+                    type: 'info'
                 })
                 this.cancelNum = 0
             }
         },
         // 1 接受信件
         submit() {
-            this.flowNum++
+            this.$message({
+                message: '公文流程审批通过！',
+                type: 'success'
+            })
+            setTimeout(()=>{
+                this.flowNum++
+                setTimeout(()=>{
+                    this.showExpressCode = true
+                },60000)
+            },2000)
         }
     }
 
@@ -100,7 +101,7 @@ export default {
 .openPage {
     float: left;
     width: 100%;
-    height: 500px;
+    height: 590px;
     /* background-color: lightgrey; */
     display: flex;
     flex-direction: column;
@@ -120,8 +121,16 @@ export default {
 }
 .text {
     width: 100%;
-    height: 450px;
+    height: 540px;
     border-bottom: 1px dotted lightgray;
+    /* background-image: url(../../assets/document.png); */
+    /* background-size: 100%; */
+    overflow: scroll;
+}
+#doc {
+    width: 100%;
+    max-width: 870px;
+    
 }
 .btn {
     width: 100%;
@@ -133,6 +142,14 @@ export default {
     margin: 10px 0;
 }
 #cancel-btn {
+}
+.easterEgg {
+    width: 100%;
+    height: 90px;
+    font-size: 25px;
+    line-height: 90px;
+    display: flex;
+    justify-content: center;
 }
 
 </style>

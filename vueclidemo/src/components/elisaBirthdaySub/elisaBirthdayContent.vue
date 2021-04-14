@@ -27,7 +27,7 @@
         <div v-else-if="flowNum === 2">
             <iframe src="https://bruno-simon.com/" frameborder="0" width="870px" height="500px"></iframe>
             <div class="easterEgg">
-                <p class="tipsText" v-show="!showExpressCode">揸BuBu车  发现小彩蛋</p>
+                <p class="tipsText">揸BuBu车  发现小彩蛋</p>
                 <p class="expressCode" v-show="showExpressCode">11-3-3009</p>
             </div>
         </div>
@@ -85,7 +85,7 @@ export default {
                 this.flowNum++
                 setTimeout(()=>{
                     this.showExpressCode = true
-                },60000)
+                },120000)
             },2000)
         }
     }
@@ -150,6 +150,13 @@ export default {
     line-height: 90px;
     display: flex;
     justify-content: center;
+}
+.expressCode {
+    font-size: 8px;
+    color: darkorange;
+    position: absolute;
+    top: 150px;
+    left: 60px;
 }
 
 </style>

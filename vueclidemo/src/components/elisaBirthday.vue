@@ -9,11 +9,11 @@
             <ElisaBirthdayContent></ElisaBirthdayContent>
         </div>
         <div class="song">
-            <audio autoplay="autoplay" controls="controls">
-                <source :src="songUrl" />
+            <!-- <audio autoplay="autoplay" controls="controls" ref="audio" src="https://music.163.com/#/song?id=5270588">
+                <source src="https://music.163.com/#/song?id=5270588" />
                 不支持
-            </audio>
-            <!-- <iframe :src="songUrl" allow="autoplay" frameborder="0"></iframe> -->
+            </audio> -->
+            <iframe :src="songUrl" allow="autoplay" frameborder="0"></iframe>
         </div>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
     name: 'app',
     data() {
         return {
-            songUrl: "http://aqqmusic.tc.qq.com/amobile.music.tc.qq.com/C4000022qJBx2sbCrt.m4a?guid=5482205086&vkey=01192196F0B46C2C076B03EB49CB6AF57CC286252E9017D4E78B6F093F98ABEC1C850481B5C7D2CA0BF53C452DACDF37B5CDE2554E58981E&uin=&fromtag=38",
+            songUrl: "https://www.kugou.com/song/#hash=05A7B5ABA4F46102E1AFA4DD4E704ABC&album_id=1011161",
         }
     },
     methods: {
@@ -37,7 +37,12 @@ export default {
     components: {
         UserInfo, ElisaBirthdayContent
     },
-    create() {
+    created() {
+        // setTimeout(() => {
+        // // this.$refs.audio.play()
+        //     this.$refs.audio.style.display = "none"
+        //     this.$refs.audio.play()
+        // }, 2000);
     }
 
 }
@@ -52,11 +57,12 @@ export default {
     position: relative;
 }
 .background {
-    height: 565px;
+    height: 636px;
     overflow: hidden;
-    background-image: url(../assets/bg2.jpg);
+    background-image: url(../assets/bg4.jpeg);
     background-size: 100%;
-    filter: blur(13px);
+    background-position-y: 80px;
+    filter: blur(3px);
 }
 .box {
     position: absolute;
@@ -68,14 +74,14 @@ export default {
     box-shadow: 1px 1px 20px lightgrey;
 }
 .userInfo {
-    left: 100px;
+    left: 170px;
     width: 270px;
 }
 .userBtnPage>.el-button {
     margin: 20px 0 0 0;
 }
 .content {
-    left: 400px;
+    left: 450px;
     width: 870px;
 }
 .song {

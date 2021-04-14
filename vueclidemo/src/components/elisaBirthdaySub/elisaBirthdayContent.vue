@@ -28,7 +28,7 @@
             <iframe src="https://bruno-simon.com/" frameborder="0" width="870px" height="500px"></iframe>
             <div class="easterEgg">
                 <p class="tipsText">揸BuBu车  发现小彩蛋</p>
-                <p class="expressCode" v-show="showExpressCode">11-3-3009</p>
+                <p class="expressCode" v-show="showExpressCode">2-3-3019</p>
             </div>
         </div>
     </div>

@@ -9,11 +9,14 @@
             <ElisaBirthdayContent></ElisaBirthdayContent>
         </div>
         <div class="song">
+            <!-- audio控件的自动播放被chrome禁用了 -->
             <!-- <audio autoplay="autoplay" controls="controls" ref="audio" src="https://music.163.com/#/song?id=5270588">
                 <source src="https://music.163.com/#/song?id=5270588" />
                 不支持
             </audio> -->
-            <iframe :src="songUrl" allow="autoplay" frameborder="0"></iframe>
+
+            <!-- 非生日时段不播放生日歌 -->
+            <!-- <iframe :src="songUrl" allow="autoplay" frameborder="0"></iframe> -->
         </div>
   </div>
 </template>

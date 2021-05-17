@@ -28,10 +28,10 @@ Vue.use(CryptoJS)
 Vue.config.productionTip = false
 
 Vue.prototype.$axios = axios.create({
-  baseURL: 'http://localhost:3000/'
+  baseURL: 'http://119.23.68.153:3000/'
 })
 let myAxios = axios.create({
-  baseURL: 'http://localhost:3000/'
+  baseURL: 'http://119.23.68.153:3000/'
 })
 Vue.prototype.$crypto = CryptoJS
 // Vue.prototype.$qiniu = qiniu

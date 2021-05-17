@@ -16,9 +16,9 @@
         >
           <el-col :xs="4" :sm="24" :md="24" :lg="3" :xl="1">
             <el-menu-item index="1">
-              <!-- <i class="el-icon-s-shop"></i>
-              <span>LARDCANDY</span> -->
-              <h3>Elisa生日应援官网</h3>
+              <i class="el-icon-s-shop"></i>
+              <span>LARDCANDY</span>
+              <!-- <h3>Elisa生日应援官网</h3> -->
             </el-menu-item>
           </el-col>
           <el-col :xs="4" :sm="24" :md="24" :lg="2" :xl="1">
@@ -28,21 +28,26 @@
           </el-col>
           <el-col :xs="4" :sm="24" :md="24" :lg="2" :xl="1">
             <el-menu-item index="3">
-              <router-link to="/discussArea" tag="div">讨论区</router-link>
+              <router-link to="/secretGarden" tag="div">逛一逛</router-link>
             </el-menu-item>
           </el-col>
           <el-col :xs="4" :sm="24" :md="24" :lg="2" :xl="1">
             <el-menu-item index="4">
-              <router-link to="/resource" tag="div">资源</router-link>
+              <router-link to="/discussArea" tag="div">讨论区</router-link>
             </el-menu-item>
           </el-col>
           <el-col :xs="4" :sm="24" :md="24" :lg="2" :xl="1">
             <el-menu-item index="5">
-              <router-link to="/blogEdit" tag="div">写博客</router-link>
+              <router-link to="/resource" tag="div">资源</router-link>
             </el-menu-item>
           </el-col>
           <el-col :xs="4" :sm="24" :md="24" :lg="2" :xl="1">
             <el-menu-item index="6">
+              <router-link to="/blogEdit" tag="div">写博客</router-link>
+            </el-menu-item>
+          </el-col>
+          <el-col :xs="4" :sm="24" :md="24" :lg="2" :xl="1">
+            <el-menu-item index="7">
               <router-link
                 to="/personalCenter"
                 tag="div"

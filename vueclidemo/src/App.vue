@@ -61,6 +61,10 @@
         <router-view></router-view>
       </div>
     </el-row>
+    <!-- footer -->
+    <div>
+      <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021064445号</a>
+    </div>
   </div>
 </template>
 

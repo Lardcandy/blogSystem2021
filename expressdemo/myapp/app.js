@@ -19,6 +19,7 @@ var getArticleDetailsRouter = require('./routes/getArticleDetails');
 var imgAddRouter = require('./routes/imgAdd');
 var submitCommentRouter = require('./routes/submitComment');
 var mailValidateRouter = require('./routes/mailValidate');
+const { OctetStreamParser } = require('formidable');
 
 var app = express();
 
@@ -63,5 +64,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+process.env.port = 3000;
 
 module.exports = app;
